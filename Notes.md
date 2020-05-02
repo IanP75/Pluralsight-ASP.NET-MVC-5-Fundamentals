@@ -48,6 +48,3 @@ Two types of controller, one for Web UI, that uses `View()`, one for APIs that p
 API methods match http requests, e.g. Get, Post, etc. Route just contains controller.
 
 Needs separate startup configuration from UI.
-
-------------
-edited from personal pc
