@@ -38,3 +38,13 @@ Reference via `ConfigurationManager.AppSettings[key]`.
 Dependency Inversion Principle means we inject references into constructors. Need an Inversion of Control container.
 
 Can use Autofac.MVC5 (extends Autofac).
+
+#### Section 4: MVC Controllers
+Can access query string vaules via` HTTPContext.RequestQueryString`, but MVC will do it for you if passed to the method.
+Note that MVC will automatically protect against dangerous content.
+
+Two types of controller, one for Web UI, that uses `View()`, one for APIs that produces json or XML.
+
+API methods match http requests, e.g. Get, Post, etc. Route just contains controller.
+
+Needs separate startup configuration from UI.

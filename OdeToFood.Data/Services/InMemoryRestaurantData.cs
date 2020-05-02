@@ -17,6 +17,13 @@ namespace OdeToFood.Data.Services
                 new Restaurant { Id = 3, Name = "Mango Grove", Cuisine = CuisineType.Indian }
             };
         }
+
+        public Restaurant Get(int id)
+        {
+            // Restaurant is a reference type so Default is a null
+            return restaurants.FirstOrDefault(r => r.Id == id);
+        }
+
         public IEnumerable<Restaurant> GetAll()
         {
             return restaurants.OrderBy(r => r.Name);
