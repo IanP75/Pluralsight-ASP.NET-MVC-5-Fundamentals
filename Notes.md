@@ -48,3 +48,13 @@ Two types of controller, one for Web UI, that uses `View()`, one for APIs that p
 API methods match http requests, e.g. Get, Post, etc. Route just contains controller.
 
 Needs separate startup configuration from UI.
+
+#### Section 5: MVC Models
+
+A model is similar to a database entity, a view model is for data specific to the view.
+A view model can contain entities as well as other data.
+
+ModelState contains the state of the model after model binding 
+(the part where it takes data from the form, query string, etc.).
+
+Model binding checks data annotations.
