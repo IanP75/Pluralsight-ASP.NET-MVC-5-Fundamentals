@@ -58,3 +58,6 @@ ModelState contains the state of the model after model binding
 (the part where it takes data from the form, query string, etc.).
 
 Model binding checks data annotations.
+
+#### Section 6: Entity Framework in MVC
+

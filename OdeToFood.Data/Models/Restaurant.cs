@@ -19,6 +19,7 @@ namespace OdeToFood.Data.Models
         //[DataType(DataType.Password)]
         
         [Required]
+        [MaxLength(255)]
         public string Name { get; set; }
 
         [Display(Name = "Type of food")]
