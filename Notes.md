@@ -61,3 +61,6 @@ Model binding checks data annotations.
 
 #### Section 6: Entity Framework in MVC
 
+Can implement optimistic concurrency with `db.Entry`, this tracks the item.
+
+Entity Framework will create the database if none there, using the DBContext to create the objects.
