@@ -64,3 +64,63 @@ Model binding checks data annotations.
 Can implement optimistic concurrency with `db.Entry`, this tracks the item.
 
 Entity Framework will create the database if none there, using the DBContext to create the objects.
+
+#### Section 7: Razor views
+
+###### Code in html
+
+Use @ with curly braces for code blocks:
+
+    @{
+    
+    }
+
+VS will work out what is markup (most of the time).
+
+`@:` explicitly renders as html.
+
+Can just type straight after the `@` (this is an expression):
+
+    @Model.Count();
+
+Raw html can be emitted with:
+
+    @Html.Raw("")
+
+Can escape `@` with `@@`. 
+
+`@()` explicitly makes this code.
+
+###### Layout
+Layout property of view tells it which layout to use. This controls the outer bits and styling.
+Default comes from `_ViewStart.cshtml`, which points to `~/Views/Shared/_Layout.cshtml`.
+
+`_ViewStart` is hierarchical, it looks for them in each folder.
+
+`@RenderBody()` is found in layouts, and is a call to render the inner view.
+
+`@RenderSection("section name")` lets you add your own custom sections. Implement with 
+
+    @section sectionname {
+        my custom markup
+    }
+in your view.
+
+###### Partial views
+
+Partial views allow you to make chunks of reusable markup. Render with `@Html.Partial("_partialName", model)`. (underscore prefix is the convention for shared layouts).
+
+Create in Shared folder so can be used in any page.
+
+###### ViewBag
+
+ViewBag is a dynamic data structure that can be accessed in a view, so is basically a dictionary of key value pairs.
+
+Can set with `ViewBag.MyProperty = "Anything"` and access via `ViewBag.MyProperty`.
+
+ViewBag saves working with lots of different models for each page, it is common to all pages.
+
+###### Passing data between requests
+
+Use TempData["key"] to pass data across requests. Only lasts for the next request.
+
