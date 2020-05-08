@@ -124,7 +124,7 @@ ViewBag saves working with lots of different models for each page, it is common 
 
 Use TempData["key"] to pass data across requests. Only lasts for the next request.
 
-#### Front End Frameworks
+#### Section 8: Front End Frameworks
 
 Right click project - Add - Client-Side Library...
 
@@ -139,3 +139,19 @@ Libraries are stored in libman.json
 This is similar to a package manager in that we dont need to source control the files, VS can download them as required.
 
 Files in lib folder dont have versions, so can change version in libman and download new version, and use straight away.
+
+#### Section 9: Deploying MVC Applications
+
+RIght click website - Publish...
+
+Use Web.[release].config to set attributes for publish e.g. connection string.
+
+    xdt:Transform="SetAttributes" xdt:Locator="Match(name)"
+
+Find by using the specified name and set the attributes.
+
+If you application pool is running under the ApplicationPoolIdentity, give it access to SQL Server via the Login 
+
+    [IIS APPPOOL\AppPoolName]
+
+Needs the server role [dbcreator] to create the database.
