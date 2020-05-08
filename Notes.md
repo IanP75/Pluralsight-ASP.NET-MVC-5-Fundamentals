@@ -124,3 +124,18 @@ ViewBag saves working with lots of different models for each page, it is common 
 
 Use TempData["key"] to pass data across requests. Only lasts for the next request.
 
+#### Front End Frameworks
+
+Right click project - Add - Client-Side Library...
+
+Libraries are stored in libman.json
+
+    "libraries": [
+    {
+        "library": "jquery@3.5.1",
+        "destination": "lib/jquery/"
+    }
+
+This is similar to a package manager in that we dont need to source control the files, VS can download them as required.
+
+Files in lib folder dont have versions, so can change version in libman and download new version, and use straight away.
